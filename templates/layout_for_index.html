@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    {% macro style_switcher(mode) %}
+    {% if mode == 'light' %}
+    <link rel="stylesheet" href="/static/light_style.css">
+    {% elif mode == 'dark' %}
+    <link rel="stylesheet" href="/static/dark_style.css">
+    {% else %}
+    <link rel="stylesheet" href="/static/light_style.css">
+    {% endif %}
+    {% endmacro %}
+    {{ style_switcher('dark') }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+
+<header>
+    <h1>{% block header %}{% endblock %}</h1>
+    <nav>
+        <ul>
+            <li style="display: inline-block; margin-right: 20px;"><a href="{{ url_for('index') }}">Головна</a></li>
+            <li style="display: inline-block; margin-right: 20px;"><a href="{{ url_for('menu') }}">Меню</a></li>
+            <li style="display: inline-block;"><a href="{{ url_for('about_us') }}">Про нас</a></li>
+            <li style="display: inline-block; margin-right: 20px;"><a href="{{ url_for('order') }}">Зробити замовлення</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+
+<footer>
+    <p>&copy; 2023 Наша Компанія. Усі права захищені.</p>
+    <img src="{{ url_for('static', filename='images/pizza.jpg') }}" alt="Наша Компанія" style="width: 100%; max-width: 500px;">
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='oder_form.css') }}">
+</head>
+<body>
+<h2>Оформлення замовлення</h2>
+<form method="post" action="{{ url_for('order') }}">
+    <label for="first_name">Ім'я:</label>
+    <input type="text" name="first_name" required>
+
+    <label for="last_name">Прізвище:</label>
+    <input type="text" name="last_name" required>
+
+    <label for="phone_number">Номер телефону:</label>
+    <input type="tel" name="phone_number" required>
+
+    <label for="address">Адреса доставки:</label>
+    <textarea name="address" required></textarea>
+    <label for="pizza_type">Вид піци:</label>
+
+    <select name="pizza_type" required>
+        <option value="Маргарита">Маргарита</option>
+        <option value="Пепероні">Пепероні</option>
+        <option value="Гавайська">Гавайська</option>
+        <option value="Чотири сири">Чотири сири</option>
+        <option value="Вегетаріанська">Вегетаріанська</option>
+    </select>
+
+    <button type="submit">Замовити</button>
+</form>
+</body>
+</html>

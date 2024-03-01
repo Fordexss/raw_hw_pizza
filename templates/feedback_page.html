@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+</head>
+<body>
+    <h1>Feedback Page</h1>
+
+    {% if feedbacks %}
+        <ul>
+            {% for feedback in feedbacks %}
+                <li>
+                    <strong>Name:</strong> {{ feedback.name }}<br>
+                    <strong>Feedback Type:</strong> {{ feedback.feedback_type }}<br>
+                    <strong>Mark:</strong> {{ feedback.mark }}<br>
+                    <strong>Comment:</strong> {{ feedback.comment }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No feedback available.</p>
+    {% endif %}
+</body>
+</html>

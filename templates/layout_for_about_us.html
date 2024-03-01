@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/about_us.css">
+</head>
+<body>
+
+    <header>
+        <h1>{% block header %}{% endblock %}</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Головна</a></li>
+                <li><a href="{{ url_for('menu') }}">Меню</a></li>
+                <li><a href="{{ url_for('order') }}">Зробити замовлення</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content" class="about-us-content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Наша Компанія. Усі права захищені.</p>
+    </footer>
+
+</body>
+</html>

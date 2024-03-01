@@ -1,0 +1,56 @@
+body {
+    background: linen url("https://celes.club/uploads/posts/2022-11/1667273000_3-celes-club-p-zadnii-fon-kafe-instagram-3.jpg") center/cover;
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
+}
+
+table {
+    background-color: grey;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #007bff;
+    color: white;
+}
+
+th {
+    background-color: yellow;
+    color: black;
+}
+
+
+body {
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: yellow;
+}
+

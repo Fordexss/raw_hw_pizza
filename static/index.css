@@ -1,0 +1,36 @@
+body {
+    background: linen;
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+header a {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
